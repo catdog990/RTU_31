@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/catdog990/RTU_31/issues"
   },
-  "homepage": "https://github.com/catdog990/RTU_31#readme"
+  "homepage": "https://github.com/catdog990/RTU_31#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  }
 }
