@@ -3,13 +3,50 @@
 <html>
 <head>
     <title>Node Authentication</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../public/assets/css/style.css">
+
     <style>
-        body        { padding-top:80px; word-wrap:break-word; }
+    .header-avatar{
+        padding-top: 45%;
+        width: 30px;
+        height: 30px;
+        margin-right:10px;
+    }
+    .brand-logo{
+        margin-left: 20px;
+    }
     </style>
+
+
 </head>
 <body>
+    <nav class="white">
+        <div class="nav-wrapper">
+              <a href="#" class="brand-logo red-text">RTU</a>   
+                <ul class="hide-on-med-and-down right">               
+                    <li>    
+                       <div class="center row">
+                          <div class="col s12 " >
+                            <div class="row" id="topbarsearch">
+                              <div class="input-field col s6 s12 red-text">
+                                <i class="red-text material-icons prefix">search</i>
+                                <input type="text" placeholder="Search"  class="autocomplete red-text" >
+                                </div>
+                              </div>
+                            </div>
+                          </div>          
+                      </li>                     
+                    <li><a href="" class="red-text">Account </a></li>
+                    <li><img src="https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295430_960_720.png" alt="" class="circle responsive-img header-avatar"></li>
+                </ul>
+            </div>
+          </nav>  
 <div class="container">
 
     <div class="page-header text-center">
@@ -32,6 +69,8 @@
 
             </div>
         </div>
+
+        
 
     </div>
 
