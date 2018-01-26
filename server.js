@@ -15,7 +15,7 @@ var session      = require('express-session');
 
 var configDB = require('./config/connection.js');
 // configuration ===============================================================
-mongoose.connect("mongodb://rtu:root@rtuproject-shard-00-00-salqe.mongodb.net:27017,rtuproject-shard-00-01-salqe.mongodb.net:27017,rtuproject-shard-00-02-salqe.mongodb.net:27017/users?ssl=true&replicaSet=rtuProject-shard-0&authSource=admin"); // connect to our database
+mongoose.connect(configDB.url); // connect to our database
 
 require('./config/passport')(passport); // pass passport for configuration
 
