@@ -8,6 +8,14 @@ module.exports = function(app, passport) {
         res.render('index.ejs'); // load the index.ejs file
     });
 
+
+    // =====================================
+    // SEARCH ==============================
+    // =====================================
+    app.get('/search', function(req, res) {
+        res.render('search.ejs'); // load search.ejs file
+    });
+
     // =====================================
     // LOGIN ===============================
     // =====================================
