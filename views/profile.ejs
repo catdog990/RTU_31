@@ -21,6 +21,17 @@
     .brand-logo{
         margin-left: 20px;
     }
+    
+    body {
+        position: relative;
+        min-height: 100%;
+        min-height: 100vh;
+    }
+    footer {
+        position: absolute;
+        right: 0;bottom:0;left:0;
+    }
+      
     </style>
 
 
@@ -28,52 +39,77 @@
 <body>
     <nav class="white">
         <div class="nav-wrapper">
-              <a href="#" class="brand-logo red-text">RTU</a>   
-                <ul class="hide-on-med-and-down right">               
-                    <li>    
-                       <div class="center row">
-                          <div class="col s12 " >
+            <a href="#" class="brand-logo red-text">RTU</a>   
+            <ul class="hide-on-med-and-down right">               
+                <li>    
+                    <div class="center row">
+                        <div class="col s12 " >
                             <div class="row" id="topbarsearch">
-                              <div class="input-field col s6 s12 red-text">
-                                <i class="red-text material-icons prefix">search</i>
-                                <input type="text" placeholder="Search"  class="autocomplete red-text" >
+                                <div class="input-field col s6 s12 red-text">
+                                    <i class="red-text material-icons prefix">search</i>
+                                    <input type="text" placeholder="Search"  class="autocomplete red-text" >
                                 </div>
-                              </div>
                             </div>
-                          </div>          
-                      </li>                     
-                    <li><a href="" class="red-text">Account </a></li>
-                    <li><img src="https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295430_960_720.png" alt="" class="circle responsive-img header-avatar"></li>
+                        </div>
+                    </div>          
+                </li>                     
+                <li><a href="" class="red-text">Account </a></li>
+                <li><img src="https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295430_960_720.png" alt="" class="circle responsive-img header-avatar"></li>
+            </ul>
+        </div>
+    </nav>  
+    <div class="container">
+        <div class="row">
+            <div class="col s7">
+                <h2>About me</h2>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h2>My Listings:</h2>
+                <ul>
+                    <li> Link 1</li>
+                    <li> Link 2</li>
+                    <li> Link 3</li>
                 </ul>
             </div>
-          </nav>  
-<div class="container">
-
-    <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-    </div>
-
-    <div class="row">
-
-        <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
-            <div class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
-
-                    <p>
-                        <strong>id</strong>: <%= user._id %><br>
-                        <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
-                    </p>
-
+            <div class="col s5">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="http://materializecss.com/images/sample-1.jpg">
+                        <span class="card-title">My Info:</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            <strong>Username</strong>: <%= user._id %><br>
+                            <strong>Email</strong>: <%= user.local.email %><br>
+                            <strong>Phone Number</strong>: <%user.local.phone %><br>
+                        </p>            
+                    </div>
+                </div>
             </div>
         </div>
-
-        
-
     </div>
-
-</div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Right To You!</h5>
+                    <p class="grey-text text-lighten-4">Right to you is a convenience app that is designed to allow you to stay at home while services come to you. In the same aspect, we make it easier for clients to come find you for your wonderful services!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/catdog990/RTU_31">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                ©2018 RTU-31
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
