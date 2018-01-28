@@ -1,4 +1,8 @@
-exports.connection = {
+
+
+
+//mysql connection
+exports.connectionTwo = {
 	host: 'localhost',
 	port: 3306,
 	user: 'root',

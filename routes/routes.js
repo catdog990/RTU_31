@@ -16,6 +16,13 @@ module.exports = function(app, passport) {
         res.render('search.ejs'); // load search.ejs file
     });
 
+        // =====================================
+    // SEARCH ==============================
+    // =====================================
+    app.get('/account', function(req, res) {
+        res.render('account.ejs'); // load account.ejs file
+    });
+
     // =====================================
     // LOGIN ===============================
     // =====================================
