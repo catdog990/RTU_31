@@ -68,10 +68,9 @@ module.exports = function(passport) {
                     return done(null, newUser);
 
                 });
-                //adds login to mysql
                 db.User.create({
-                    User: email,
-                    Job: null
+                    User: req.body.Username,
+                    Job: req.body.Jobs
                 }).then(function(dbUser){
                     res.json(dbUser);
                 });
