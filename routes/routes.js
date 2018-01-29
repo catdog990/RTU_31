@@ -1,4 +1,8 @@
 // app/routes.js
+
+//Requiring our User model
+var db = require("../modelsSQL");
+
 module.exports = function(app, passport) {
 
     // =====================================
@@ -14,6 +18,13 @@ module.exports = function(app, passport) {
     // =====================================
     app.get('/search', function(req, res) {
         res.render('search.ejs'); // load search.ejs file
+    });
+
+        // =====================================
+    // SEARCH ==============================
+    // =====================================
+    app.get('/account', function(req, res) {
+        res.render('account.ejs'); // load account.ejs file
     });
 
     // =====================================
@@ -68,6 +79,20 @@ module.exports = function(app, passport) {
         req.logout();
         res.redirect('/');
     });
+
+    // =====================================
+    // New user ==============================
+    // =====================================
+    app.post('/profile', function(req, res) {
+        db.User.create({
+            User: req.body.text,
+            Job: req.body.text
+        }).then(function(dbUser){
+            res.json(dbUser);
+        });
+    });
+
+
 };
 
 // route middleware to make sure a user is logged in
