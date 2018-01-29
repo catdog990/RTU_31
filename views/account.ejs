@@ -10,31 +10,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  
-    <style>
-        body        { padding-top:80px; }
-    </style>
-</head>
-<body>
-
-<div class="row">
-<form class="col s12">
-  <div class="row">
-    <div class="input-field col s6">
-      <i class="material-icons prefix">account_circle</i>
-      <input id="icon_prefix" type="text" class="validate">
-      <label for="icon_prefix">First Name</label>
+    <script src="https://code.jquery.com/jquery.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <ul class="list-group todo-list">
+            <li class="list-group-item new-item">
+              <form id="user-form">
+              <input class="new-item" placeholder="add a name" type="text" />
+              <input class="new-job" placeholder="add a job" type="text" />
+              <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="input-field col s6">
-      <i class="material-icons prefix">phone</i>
-      <input id="icon_telephone" type="tel" class="validate">
-      <label for="icon_telephone">Job</label>
-    </div>
-  </div>
-</form>
-</div>
-<a href="/profile" class="btn btn-default"><span class="fa fa-user"></span> Save</a>
+    <!-- Custom Script -->
+    <script href='/public/js/view/js' type="text/javascript">
+    $(document).ready(function() {
+      // Getting a reference to the input field where user adds a new user
+      var $newItemInput = $("input.new-item");
+      var $newJobInput = $("input.new-job");
+      // Adding event listeners 
+      $(document).on("submit", "#user-form", insertTodo);
+      // This function inserts a new user into our database and then updates the view
+      function insertTodo(event) {
+        event.preventDefault();
+        console.log("it worked");
+        var user = {
+          Username: $newItemInput.val().trim(),
+          Jobs: $newJobInput.val().trim(),
+        };
     
-
-</div>
-</body>
-</html>
+        $.post("/account", user);
+        $newItemInput.val("");
+      }
+    });
+    
+    </script>
+  
+  </body>
+  
+  </html>

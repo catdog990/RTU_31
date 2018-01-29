@@ -3,6 +3,8 @@
 //Requiring our User model
 var db = require("../modelsSQL");
 
+
+
 module.exports = function(app, passport) {
 
     // =====================================
@@ -21,7 +23,7 @@ module.exports = function(app, passport) {
     });
 
         // =====================================
-    // SEARCH ==============================
+    // account ==============================
     // =====================================
     app.get('/account', function(req, res) {
         res.render('account.ejs'); // load account.ejs file
@@ -83,10 +85,11 @@ module.exports = function(app, passport) {
     // =====================================
     // New user ==============================
     // =====================================
-    app.post('/profile', function(req, res) {
+    app.post('/account', function(req, res) {
+        console.log(req.body.Username);
         db.User.create({
-            User: req.body.text,
-            Job: req.body.text
+            User: req.body.Username,
+            Job: req.body.Jobs
         }).then(function(dbUser){
             res.json(dbUser);
         });
