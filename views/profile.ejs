@@ -11,7 +11,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../public/assets/css/style.css">
 
-    <style>
+   
+
+
+</head>
+<style>
     .header-avatar{
         padding-top: 45%;
         width: 30px;
@@ -21,21 +25,17 @@
     .brand-logo{
         margin-left: 20px;
     }
-    
+
     body {
-        position: relative;
-        min-height: 100%;
+        display: flex;
         min-height: 100vh;
+        flex-direction: column;
     }
-    footer {
-        position: absolute;
-        right: 0;bottom:0;left:0;
-    }
-      
-    </style>
 
-
-</head>
+  .main {
+    flex: 1 0 auto;
+  }      
+</style>
 <body>
     <nav class="white">
         <div class="nav-wrapper">
@@ -58,7 +58,7 @@
             </ul>
         </div>
     </nav>  
-    <div class="container">
+    <div class="container main">
         <div class="row">
             <div class="col s7">
             <a href="/account" class="btn btn-default"><span class="fa fa-user"></span> Account setup</a>
