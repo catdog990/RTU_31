@@ -1,4 +1,8 @@
 // app/routes.js
+
+//Requiring our User model
+var db = require("../models/rtu");
+
 module.exports = function(app, passport) {
 
     // =====================================
@@ -79,9 +83,13 @@ module.exports = function(app, passport) {
     // =====================================
     // New user ==============================
     // =====================================
-    app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
+    app.post('/profile', function(req, res) {
+        db.User.create({
+            User: req.body.text,
+            Job: req.body.text
+        }).then(function(dbUser){
+            res.json(dbUser);
+        });
     });
 
 

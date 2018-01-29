@@ -5,5 +5,5 @@ module.exports = function(sequelize, Datatypes){
         User: Datatypes.STRING,
         Job: Datatypes.STRING,
     });
-    return User
+    return User;
 };
