@@ -1,7 +1,11 @@
 {
     "development": {
       "username": "root",
-      "password": "22carola",
+
+      "password": "",
+=======
+      "password": "x",
+
       "database": "RTU_db",
       "host": "127.0.0.1",
       "dialect": "mysql"
