@@ -1,7 +1,7 @@
 // app/routes.js
 
 //Requiring our User model
-var db = require("../models/rtu");
+var db = require("../modelsSQL");
 
 module.exports = function(app, passport) {
 

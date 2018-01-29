@@ -19,6 +19,9 @@ mongoose.connect(configDB.url); // connect to our database
 
 require('./config/passport')(passport); // pass passport for configuration
 
+//requring our models for syncing
+var db = require("./modelsSQL");
+
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
@@ -37,5 +40,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./routes/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
-app.listen(port);
-console.log('Listening on port: ' + port);
+db.sequelize.sync().then(function(){
+    app.listen(port, function(){
+        console.log('Listening on port: ' + port);
+    });
+});
