@@ -5,7 +5,8 @@ var LocalStrategy   = require('passport-local').Strategy;
 
 // load up the user model
 var User            = require('../models/user');
-
+//load user mysql model
+var db = require("../modelsSQL");
 // expose this function to our app using module.exports
 module.exports = function(passport) {
 
@@ -65,6 +66,13 @@ module.exports = function(passport) {
                     if (err)
                         throw err;
                     return done(null, newUser);
+
+                });
+                db.User.create({
+                    User: req.body.Username,
+                    Job: req.body.Jobs
+                }).then(function(dbUser){
+                    res.json(dbUser);
                 });
             }
 
