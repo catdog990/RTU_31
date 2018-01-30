@@ -27,7 +27,7 @@ module.exports = function(app, passport) {
     app.put('/search', function(req, res) {
         db.User.findAll({
             where: {
-              Email: req./*somthing goes here*/,
+              Job: req/*somthing goes here*/,
             }
           }).then(function(dbUser){
             res.render('search.ejs', { stuff: dbUser.dataValues });
