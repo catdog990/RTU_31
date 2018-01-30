@@ -35,15 +35,25 @@ module.exports = function(app, passport) {
     // =====================================
     app.get('/accountEdit', function(req, res) {
         res.render('accountEdit.ejs'); // load account.ejs file
+
     });
 
+    app.get("/accountEdit", function(req, res) {
+        // findAll returns all entries for a table when used with no options
+        db.User.findAll({}).then(function(dbUser) {
+          // We have access to the users as an argument inside of the callback function
+          res.json(dbUSer);
+        });
+      });
 
-    app.post('/accountEdit', function(req, res) {
+    app.put('/accountEdit', function(req, res) {
         
-        db.User.create({
-            Email: req.user.local.email,
+        db.User.update({
             User: req.body.Username,
-            Job: req.body.Jobs
+            Job: req.body.Jobs,
+            where: {
+                Email: req.user.local.email
+            }
         }).then(function(dbUser){
             res.json(dbUser);
         });
