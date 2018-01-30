@@ -64,7 +64,8 @@ module.exports = function(app, passport) {
         db.User.update({
             Email: req.user.local.email,
             User: req.body.Username,
-            Job: req.body.Jobs},
+            Job: req.body.Jobs,
+            About: req.body.Aboutme},
             {where: {
                 Email: req.user.local.email
             }
@@ -139,7 +140,8 @@ module.exports = function(app, passport) {
         db.User.create({
             Email: req.user.local.email,
             User: req.body.Username,
-            Job: req.body.Jobs
+            Job: req.body.Jobs,
+            About: null
         }).then(function(dbUser){
             res.json(dbUser);
         });

@@ -45,6 +45,7 @@
         var user = {
           Username: $newItemInput.val().trim(),
           Jobs: $newJobInput.val().trim(),
+          About: null
         };
     
         $.post("/account", user);
