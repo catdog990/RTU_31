@@ -91,4 +91,9 @@ flex: 1 0 auto;
   .input-field .prefix.active {
     color: #000;
   }
+
+  .borderclass{
+    border: white 2px solid;
+    
+  }
        
