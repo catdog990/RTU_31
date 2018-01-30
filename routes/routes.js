@@ -73,7 +73,7 @@ module.exports = function(app, passport) {
         //finds the user and pumps data to the profile
         db.User.findOne({
             where: {
-              User: req.user.local.email
+              Email: req.user.local.email
             }
           }).then(function(dbUser){
             res.render('profile.ejs', { stuff: dbUser.dataValues });
@@ -95,6 +95,7 @@ module.exports = function(app, passport) {
     app.post('/account', function(req, res) {
         console.log(req.body.Username);
         db.User.create({
+            Email: req.user.local.email,
             User: req.body.Username,
             Job: req.body.Jobs
         }).then(function(dbUser){
