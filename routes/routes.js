@@ -23,13 +23,31 @@ module.exports = function(app, passport) {
         res.render('search.ejs'); // load search.ejs file
     });
 
-        // =====================================
+    // =====================================
     // account ==============================
     // =====================================
     app.get('/account', function(req, res) {
         res.render('account.ejs'); // load account.ejs file
     });
 
+    // =====================================
+    // accountEdit ==============================
+    // =====================================
+    app.get('/accountEdit', function(req, res) {
+        res.render('accountEdit.ejs'); // load account.ejs file
+    });
+
+
+    app.post('/accountEdit', function(req, res) {
+        
+        db.User.create({
+            Email: req.user.local.email,
+            User: req.body.Username,
+            Job: req.body.Jobs
+        }).then(function(dbUser){
+            res.json(dbUser);
+        });
+    });
     // =====================================
     // LOGIN ===============================
     // =====================================
@@ -93,7 +111,7 @@ module.exports = function(app, passport) {
     // New user ==============================
     // =====================================
     app.post('/account', function(req, res) {
-        console.log(req.body.Username);
+        
         db.User.create({
             Email: req.user.local.email,
             User: req.body.Username,
