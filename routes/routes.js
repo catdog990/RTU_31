@@ -46,12 +46,13 @@ module.exports = function(app, passport) {
         });
       });
 
-    app.put('/accountEdit', function(req, res) {
+    app.post('/accountEdit', function(req, res) {
         
         db.User.update({
+            Email: req.user.local.email,
             User: req.body.Username,
-            Job: req.body.Jobs,
-            where: {
+            Job: req.body.Jobs},
+            {where: {
                 Email: req.user.local.email
             }
         }).then(function(dbUser){
