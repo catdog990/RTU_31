@@ -23,6 +23,19 @@ module.exports = function(app, passport) {
         res.render('search.ejs'); // load search.ejs file
     });
 
+    //finds required data values
+    app.put('/search', function(req, res) {
+        db.User.findAll({
+            where: {
+              Email: req./*somthing goes here*/,
+            }
+          }).then(function(dbUser){
+            res.render('search.ejs', { stuff: dbUser.dataValues });
+            });
+        
+    });
+    
+
     // =====================================
     // account ==============================
     // =====================================
