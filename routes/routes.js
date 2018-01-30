@@ -19,18 +19,15 @@ module.exports = function(app, passport) {
     // =====================================
     // SEARCH ==============================
     // =====================================
-    app.get('/search', function(req, res) {
-        res.render('search.ejs'); // load search.ejs file
-    });
 
-    //finds required data values
-    app.put('/search', function(req, res) {
+    //finds required data values that were searched
+    app.get('/search', function(req, res) {
         db.User.findAll({
             where: {
-              Job: req/*somthing goes here*/,
+              Job: req.body.jobSearch,
             }
           }).then(function(dbUser){
-            res.render('search.ejs', { stuff: dbUser.dataValues });
+            res.render('search.ejs', { stuff: dbUser });
             });
         
     });
