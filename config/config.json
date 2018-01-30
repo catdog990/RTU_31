@@ -2,21 +2,21 @@
     "development": {
       "username": "root",
 
-      "password": "root",
+      "password": "Rgm01011058?",
       "database": "RTU_db",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": null,
+      "password": "Rgm01011058?",
       "database": "database_test",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "production": {
       "username": "root",
-      "password": null,
+      "password": "Rgm01011058?",
       "database": "database_production",
       "host": "127.0.0.1",
       "dialect": "mysql"
