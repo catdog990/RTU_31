@@ -68,12 +68,7 @@ module.exports = function(passport) {
                     return done(null, newUser);
 
                 });
-                db.User.create({
-                    User: req.body.Username,
-                    Job: req.body.Jobs
-                }).then(function(dbUser){
-                    res.json(dbUser);
-                });
+            
             }
 
         });

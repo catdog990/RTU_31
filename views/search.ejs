@@ -6,83 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
   <title>Search</title>
   <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
-  <div class="row">
-
-    <div class="col s8">
-      <div class="col s6">
-        <div class="card" id="dup">
-          <div class="card-image">
-            <img src="images/sample-1.jpg">
-            <span class="card-title">Card Title</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-              little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
-
-
-      
-
-
+ 
       <script>
         $(document).ready(function () {
 
-
-
-
-
-
-
-
-          //   function diplo(){
-
-
-          //       var data = [ 
-          //     { id: 1, name: "bob" },
-          //     { id: 2, name: "john" },
-          //     { id: 3, name: "jake" },
-          // ];
-          //  for(var i=0; i < data.length; i++) { 
-          //    var dataDiv = $("<div class = 'row'>");
-          //    var colOne = $("<div class = 'col s8'>");
-          //    var colTwo = $("<div class = 'col s6'>");
-          //    var card = $("<div class = 'card'>");
-          //    var title = $("<div class = 'card-title'<span> Title </span>>");
-          //    var content = $("<div class = 'content'<p> somthing something something</p>>");
-          //    var link = $("<div class = 'link' <a href=''>A Link</a>>");
-
-
-          //  var hoof = [dataDiv.append(colOne),dataDiv.append(colTwo), dataDiv.append(card),dataDiv.append(title),dataDiv.append(content),dataDiv.append(link)];
-          //  var heef = $("<p>").text(data[i].id);
-          //  dataDiv.append(hoof);
-          //  dataDiv.append(heef);
-          //  $("body").append(dataDiv);
-          //  $("body").append(colOne);
-          //  $("body").append(colTwo);
-          //  $("body").append(card);
-          //  $("body").append(title);
-          //  $("body").append(content);
-          //  $("body").append(link);
-
-
-          // };
-
-
-
-
-
-          // };
-          // diplo();
 
 
           function renderCards(data) {
@@ -129,7 +62,132 @@
 
         });
       </script>
+=======
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
+ 
+
+ 
+
+
+
+<body>
+  <container id="search-box">
+    <nav class="white">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo red-text">RTU</a>
+        <ul class="hide-on-med-and-down right">
+          <li>
+            <div class="center row">
+              <div class="col s12 ">
+                <div class="row" id="topbarsearch">
+                  <div class="input-field col s6 s12 red-text">
+                    <i class="red-text material-icons prefix">search</i>
+                    <input type="text" placeholder="Search" class="autocomplete red-text">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="" class="red-text">Account </a>
+          </li>
+          <li>
+            <img src="https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295430_960_720.png" alt="" class="circle responsive-img header-avatar">
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </container>
+  <div class="row">
+    <div class="col s4">
+  
+
+     
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="http://absorbmarketing.com/wp-content/uploads/2015/01/Picture-of-person.png">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" id="">Steve Jobs
+            <i class="material-icons right">more_vert</i>
+          </span>
+          <p>
+            <a href="#">Reviews</a>
+          </p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Steve Jobs
+            <i class="material-icons right">close</i>
+          </span>
+          <p>Lorem Ipsum has been the industry. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem </p>
+          <img id="cal" src="https://tinyurl.com/y9wy9spf">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="http://absorbmarketing.com/wp-content/uploads/2015/01/Picture-of-person.png">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" id="">Steve Jobs
+            <i class="material-icons right">more_vert</i>
+          </span>
+          <p>
+            <a href="#">Reviews</a>
+          </p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Steve Jobs
+            <i class="material-icons right">close</i>
+          </span>
+          <p>Lorem Ipsum has been the industry. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem </p>
+          <img id="cal" src="https://tinyurl.com/y9wy9spf">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="http://absorbmarketing.com/wp-content/uploads/2015/01/Picture-of-person.png">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4" id="">Steve Jobs
+            <i class="material-icons right">more_vert</i>
+          </span>
+          <p>
+            <a href="#">Reviews</a>
+          </p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Steve Jobs
+            <i class="material-icons right">close</i>
+          </span>
+          <p>Lorem Ipsum has been the industry. It was popularised in the 1960s with the release of Letraset sheets containing
+            Lorem </p>
+          <img id="cal" src="https://tinyurl.com/y9wy9spf">
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+  <footer class="page-footer">
+    <div class="container">
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        ©2018 RTU-31
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
 
 </html>

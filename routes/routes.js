@@ -23,13 +23,56 @@ module.exports = function(app, passport) {
         res.render('search.ejs'); // load search.ejs file
     });
 
-        // =====================================
+    //finds required data values
+    app.put('/search', function(req, res) {
+        db.User.findAll({
+            where: {
+              Job: req/*somthing goes here*/,
+            }
+          }).then(function(dbUser){
+            res.render('search.ejs', { stuff: dbUser.dataValues });
+            });
+        
+    });
+    
+
+    // =====================================
     // account ==============================
     // =====================================
     app.get('/account', function(req, res) {
         res.render('account.ejs'); // load account.ejs file
     });
 
+    // =====================================
+    // accountEdit ==============================
+    // =====================================
+    app.get('/accountEdit', function(req, res) {
+        res.render('accountEdit.ejs'); // load account.ejs file
+
+    });
+
+    app.get("/accountEdit", function(req, res) {
+        // findAll returns all entries for a table when used with no options
+        db.User.findAll({}).then(function(dbUser) {
+          // We have access to the users as an argument inside of the callback function
+          res.json(dbUSer);
+        });
+      });
+
+    app.post('/accountEdit', function(req, res) {
+        
+        db.User.update({
+            Email: req.user.local.email,
+            User: req.body.Username,
+            Job: req.body.Jobs,
+            About: req.body.Aboutme},
+            {where: {
+                Email: req.user.local.email
+            }
+        }).then(function(dbUser){
+            res.json(dbUser);
+        });
+    });
     // =====================================
     // LOGIN ===============================
     // =====================================
@@ -73,7 +116,7 @@ module.exports = function(app, passport) {
         //finds the user and pumps data to the profile
         db.User.findOne({
             where: {
-              User: req.user.local.email
+              Email: req.user.local.email
             }
           }).then(function(dbUser){
             res.render('profile.ejs', { stuff: dbUser.dataValues });
@@ -93,10 +136,12 @@ module.exports = function(app, passport) {
     // New user ==============================
     // =====================================
     app.post('/account', function(req, res) {
-        console.log(req.body.Username);
+        
         db.User.create({
+            Email: req.user.local.email,
             User: req.body.Username,
-            Job: req.body.Jobs
+            Job: req.body.Jobs,
+            About: null
         }).then(function(dbUser){
             res.json(dbUser);
         });

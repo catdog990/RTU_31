@@ -9,7 +9,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../public/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
    
 
@@ -140,17 +140,9 @@ body {font-family: Verdana, sans-serif;}
     <div class="container main">
         <div class="row">
             <div class="col s7">
-            <a href="/account" class="btn btn-default"><span class="fa fa-user"></span> Account setup</a>
-                <h2>About me</h2>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <h2>My Listings:</h2>
-                <ul>
-                    <li> Link 1</li>
-                    <li> Link 2</li>
-                    <li> Link 3</li>
-                </ul>
+            <a href="/accountEdit" class="btn btn-default"><span class="fa fa-user"></span> Account setup</a>
+                <h2>About me:</h2>
+                <p></p> <%= stuff.About %><br> 
             </div>
             <div class="col s5">
                 <div class="card">
@@ -161,7 +153,7 @@ body {font-family: Verdana, sans-serif;}
                     </div>
                     <div class="card-content">
                         <p>
-                            <strong>Email</strong>: <%= stuff.User %><br>
+                            <strong>Name</strong>: <%= stuff.User %><br>
                             <strong>Job</strong>: <%= stuff.Job %><br>
                             
                         </p>            

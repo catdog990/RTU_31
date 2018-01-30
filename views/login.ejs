@@ -2,46 +2,72 @@
 <!doctype html>
 <html>
 <head>
-    <title>Node Authentication</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    <style>
-        body        { padding-top:80px; }
-    </style>
+    <title>Right to You!</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+
 </head>
-<body>
-<div class="container">
+<body class="grey">
+<div class="container main">
 
-<div class="col-sm-6 col-sm-offset-3">
-
-    <h1><span class="fa fa-sign-in"></span> Login</h1>
+<div class="row">
+    <div class="col s6 offset-s3 borderclass grey darken-1 z-depth-5">
+    <h1 class="center-align thin white-text"><span class="fa fa-sign-in"></span> Login</h1>
 
     <!-- show any messages that come back with authentication -->
     <% if (message.length > 0) { %>
-        <div class="alert alert-danger"><%= message %></div>
+        <div class="red-text"><%= message %></div>
     <% } %>
 
     <!-- LOGIN FORM -->
     <form action="/login" method="post">
         <div class="form-group">
-            <label>Email</label>
-            <input type="text" class="form-control" name="email">
+            <label class="white-text thin">Email</label>
+            <input placeholder="example@example.com" type="text" class="form-control" name="email">
         </div>
         <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" name="password">
+            <label class="white-text thin">Password</label>
+            <input placeholder="..."type="password" class="form-control" name="password">
         </div>
 
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        <button type="submit" class="btn center-align grey darken-3 thin">Login</button>
     </form>
 
-    <hr>
+    
 
-    <p>Need an account? <a href="/signup">Signup</a></p>
-    <p>Or go <a href="/">home</a>.</p>
-
-</div>
+    <p class="white-text">Need an account? <a href="/signup" class="pink-text">Signup</a></p>
+    <p class="white-text">Or go <a href="/" class="pink-text">home</a>.</p>
 
 </div>
+
+</div>
+</div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Right To You!</h5>
+                    <p class="grey-text text-lighten-4">Right to you is a convenience app that is designed to allow you to stay at home while services come to you. In the same aspect, we make it easier for clients to come find you for your wonderful services!</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/catdog990/RTU_31">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                ©2018 RTU-31
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

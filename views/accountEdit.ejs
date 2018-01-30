@@ -11,9 +11,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  
     <script src="https://code.jquery.com/jquery.js"></script>
-  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   </head>
- 
+  
   <body>
     <div class="container">
       <div class="row">
@@ -23,6 +22,7 @@
               <form id="user-form">
               <input class="new-item" placeholder="add a name" type="text" />
               <input class="new-job" placeholder="add a job" type="text" />
+              <input class="new-about" placeholder="add an about me" type="text" />
               <button type="submit" class="btn btn-default">Submit</button>
               <a href="/profile" class="btn btn-default"><span class="fa fa-user"></span> Return to Profile</a>
               </form>
@@ -37,19 +37,19 @@
       // Getting a reference to the input field where user adds a new user
       var $newItemInput = $("input.new-item");
       var $newJobInput = $("input.new-job");
+      var $newAboutInput = $("input.new-about");
       // Adding event listeners 
-      $(document).on("submit", "#user-form", insertTodo);
+      $(document).on("submit", "#user-form", insertUser);
       // This function inserts a new user into our database and then updates the view
-      function insertTodo(event) {
+      function insertUser(event) {
         event.preventDefault();
-        console.log("it worked");
         var user = {
           Username: $newItemInput.val().trim(),
           Jobs: $newJobInput.val().trim(),
-          About: null
+          Aboutme: $newAboutInput.val().trim(),
         };
     
-        $.post("/account", user);
+        $.post("/accountEdit", user);
         $newItemInput.val("");
       }
     });
