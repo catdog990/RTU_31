@@ -50,8 +50,15 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  padding-top: 80px;
+
 }
+
+.paddingtop{
+  padding-top:80px;
+
+}
+
+
 
 .main {
   flex: 1 0 auto;
