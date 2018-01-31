@@ -80,3 +80,14 @@ input[type=text]:focus {
 .page-footer {
   padding-bottom: 12px;
 }
+
+/* .row .input-field input:focus {
+  border-bottom: 1px solid gray !important;
+  box-shadow: 0 1px 0 0 gray !important
+}  */
+
+
+.line:focus{ 
+  border-bottom: 1px solid gray !important;
+  box-shadow: 0 1px 0 0 gray !important
+}
