@@ -55,7 +55,6 @@
           Jobs: $newJobInput.val().trim(),
           About: null
         };
-    
         $.post("/account", user);
         $newItemInput.val("");
         $newJobInput.val("");
