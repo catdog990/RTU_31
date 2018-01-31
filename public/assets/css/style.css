@@ -50,8 +50,13 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+
+.paddingtop{
   padding-top:80px;
 }
+
+
 
 .main {
 flex: 1 0 auto;
