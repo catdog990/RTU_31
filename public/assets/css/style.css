@@ -1,21 +1,22 @@
 .header-avatar {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
-.header-avatar {
-    padding-top: 45%;
-   width: 30px;
-   height: 30px;
-   margin-right: 10px; 
-   
- }
 
- .brand-logo {
-   margin-left: 20px;
- }
- .form-control{
-   color: black;
- }
+.header-avatar {
+  padding-top: 45%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+
+.form-control {
+  color: black;
+}
 
 /* 
  body {
@@ -30,54 +31,70 @@
    left: 0;
  } */
 
- #cal {
-   height: 286px;
-   width: 286px;
- }
+#cal {
+  height: 286px;
+  width: 286px;
+}
 
- #cal img {
+#cal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
- }
+/* ul {
+  height: 64px;
+} */
 
- ul {
-   height:64px;
- }
- 
- body {
+body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  padding-top:80px;
+
 }
 
+.paddingtop{
+  padding-top:80px;
+
+}
+
+
+
 .main {
-flex: 1 0 auto;
-}   
-.button-padding{
+  flex: 1 0 auto;
+}
+
+.button-padding {
   padding-bottom: 20px;
 }
 
-.headerText{
+.headerText {
   /* font-family: 'Oswald', sans-serif; */
   font-size: 200px;
-
-
 }
 
 /* label underline focus color */
-input[type=text]:focus{
+
+input[type=text]:focus {
   border-bottom: 1px solid black;
   box-shadow: 0 1px 0 0 black;
-  }
-  .borderclass{
-    border: white 2px solid;
-    
-  }
-.page-footer{
-  padding-bottom:12px;
 }
 
-       
+.borderclass {
+  border: white 2px solid;
+}
+
+.page-footer {
+  padding-bottom: 12px;
+}
+
+/* .row .input-field input:focus {
+  border-bottom: 1px solid gray !important;
+  box-shadow: 0 1px 0 0 gray !important
+}  */
+
+
+.line:focus{ 
+  border-bottom: 1px solid gray !important;
+  box-shadow: 0 1px 0 0 gray !important
+}

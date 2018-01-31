@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "Knayqhyu_13",
+      "password": "root",
       "database": "RTU_db",
       "host": "127.0.0.1",
       "dialect": "mysql"
