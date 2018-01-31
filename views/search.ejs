@@ -14,16 +14,19 @@
 
 <body>
   <html>
+      <div class="container">
+          <div class="results">
+              <% for(var i=0; i < stuff.length; i++) { %>
+                <tr>
+                  <td><%= stuff[i].User %></td>
+                  <td><%= stuff[i].Job %></td>
+                </tr>
+             <% } %>
 
-    <p> 
-
-    <% for(var i=0; i < stuff.length; i++) { %>
-      <tr>
-        <td><%= stuff[i].User %></td>
-        <td><%= stuff[i].Job %></td>
-      </tr>
-   <% } %>
-    </p>
+          </div>
+          
+        </div>
+ 
 
 
     <form id="user-form">
@@ -52,7 +55,8 @@
         };
     
         $.post("/search", user);
-        $newJobInput="";
+        $newJobInput.val("");
+        location.reload();
       }
     });
            

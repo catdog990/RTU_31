@@ -19,7 +19,8 @@ module.exports = function(app, passport) {
     
     app.get('/search', function(req, res) {
         res.render('search.ejs', {stuff: results});
-        results = {}; // load the index.ejs file
+        
+         // load the index.ejs file
     });
 
     // =====================================
@@ -28,14 +29,16 @@ module.exports = function(app, passport) {
 
     //finds required data values that were searched
     app.post('/search', function(req, res) {
+        results = {};
         db.User.findAll({
             where: {
               Job: req.body.jobSearch,
             }
           }).then(function(dbUser){
-            results = dbUser;
             res.render('search.ejs', { stuff: dbUser});
+            results = dbUser;
             });
+
         
     });
     
