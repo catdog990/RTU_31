@@ -38,11 +38,11 @@
       var $newItemInput = $("input.new-item");
       var $newJobInput = $("input.new-job");
       // Adding event listeners 
-      $(document).on("submit", "#user-form", insertTodo);
+      $(document).on("submit", "#user-form", insertUser);
       // This function inserts a new user into our database and then updates the view
-      function insertTodo(event) {
+      function insertUser(event) {
         event.preventDefault();
-        console.log("it worked");
+        
         var user = {
           Username: $newItemInput.val().trim(),
           Jobs: $newJobInput.val().trim(),

@@ -2,7 +2,7 @@
 
 //Requiring our User model
 var db = require("../modelsSQL");
-
+var results = [];
 
     
 
@@ -13,21 +13,28 @@ module.exports = function(app, passport) {
     // =====================================
     app.get('/', function(req, res) {
         res.render('index.ejs'); // load the index.ejs file
+
     });
 
+    
+    app.get('/search', function(req, res) {
+        res.render('search.ejs', {stuff: results});
+        results = {}; // load the index.ejs file
+    });
 
     // =====================================
     // SEARCH ==============================
     // =====================================
 
     //finds required data values that were searched
-    app.get('/search', function(req, res) {
+    app.post('/search', function(req, res) {
         db.User.findAll({
             where: {
               Job: req.body.jobSearch,
             }
           }).then(function(dbUser){
-            res.render('search.ejs', { stuff: dbUser });
+            results = dbUser;
+            res.render('search.ejs', { stuff: dbUser});
             });
         
     });
@@ -52,7 +59,7 @@ module.exports = function(app, passport) {
         // findAll returns all entries for a table when used with no options
         db.User.findAll({}).then(function(dbUser) {
           // We have access to the users as an argument inside of the callback function
-          res.json(dbUSer);
+          res.json(dbUaer);
         });
       });
 
