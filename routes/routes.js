@@ -30,6 +30,7 @@ module.exports = function(app, passport) {
               Job: req/*somthing goes here*/,
             }
           }).then(function(dbUser){
+              console.log(dbUser);
             res.render('search.ejs', { stuff: dbUser.dataValues });
             });
         
