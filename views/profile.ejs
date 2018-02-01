@@ -67,13 +67,13 @@
             <div class="col s7">
                 <h2 class= "white-text thin">About me:</h2>
                 <div class="borderProfile grey darken-1 z-depth-1">
-                <p></p> <%= stuff.About %><br> 
+                <p class=white-text style="padding: 5px"> <%= stuff.About %><br> </p>
                 </div>
             </div>
             <div class="col s5">
                 <div class="card borderclass">
                     <div class="card-image">
-                        <img src="http://materializecss.com/images/sample-1.jpg">
+                        <img  src= '<%= stuff.Image %>'>
                         <span class="card-title">My Info:</span>
                         <a href="/accountEdit"class="btn-floating halfway-fab waves-effect waves-light red lighten-1"><i class="material-icons">edit</i></a>
                     </div>
