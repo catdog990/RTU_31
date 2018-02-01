@@ -18,9 +18,9 @@ module.exports = function(app, passport) {
 
     
     app.get('/search', function(req, res) {
-        res.render('search.ejs', {stuff: results});
+        res.render('search.ejs', {stuff: results});//load the search.ejs file
         
-         // load the index.ejs file
+        
     });
 
     
@@ -29,7 +29,7 @@ module.exports = function(app, passport) {
     // SEARCH ==============================
     // =====================================
 
-    //finds required data values that were searched
+    //finds required data values that were searched and update the description and image inside the card, in the ejs//
     app.post('/search', function(req, res) {
         results = {};
         db.User.findAll({
@@ -55,7 +55,6 @@ module.exports = function(app, passport) {
 
         
     });
-// this route will prob break the entire shits, so it might need to be moved into the route above, or make a get route and name it differently than the search route//
   
    
     
