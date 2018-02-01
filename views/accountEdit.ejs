@@ -25,7 +25,7 @@
               <form id="user-form">
               <input class="new-item line white-text" placeholder="Edit Name" type="text" />
               <input class="new-job line white-text" placeholder="Edit Job" type="text" /> 
-              <input class="new-job line white-text" placeholder="Card Image URL" type="text" /> 
+              <input class="new-image line white-text" placeholder="Card Image URL" type="text" /> 
               
               <div class="row">
                     <div class="input-field col s12">
@@ -67,6 +67,7 @@
       var $newJobInput = $("input.new-job");
       var $newAboutInput = $("textarea.new-about");
       var $newCardInput = $("textarea.new-card");
+      var $newImageInput = $("input.new-image");
       // Adding event listeners 
       $(document).on("submit", "#user-form", insertUser);
       // This function inserts a new user into our database and then updates the view
@@ -76,7 +77,8 @@
           Username: $newItemInput.val().trim(),
           Jobs: $newJobInput.val().trim(),
           Aboutme: $newAboutInput.val().trim(),
-          Card: $newCardInput.val().trim()
+          Card: $newCardInput.val().trim(),
+          Image: $newImageInput.val().trim()
         };
     
         $.post("/accountEdit", user);
@@ -86,6 +88,7 @@
 
         $.post("/search", user);
         $newCardInput.val("");
+        $newImageInput.val();
 
       }
     });

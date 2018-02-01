@@ -42,7 +42,8 @@ module.exports = function(app, passport) {
             });
 
             db.User.update({
-                Card: req.body.Card
+                Card: req.body.Card,
+                Image: req.body.Image
              },
              {
                  where: {
