@@ -24,7 +24,8 @@
             <li class="list-group-item new-item">
               <form id="user-form">
               <input class="new-item line white-text" placeholder="Edit Name" type="text" />
-              <input class="new-job line white-text" placeholder="Edit Job" type="text" />
+              <input class="new-job line white-text" placeholder="Edit Job" type="text" /> 
+              <input class="new-job line white-text" placeholder="Card Image URL" type="text" /> 
               
               <div class="row">
                     <div class="input-field col s12">
@@ -33,8 +34,15 @@
                       
                     </div>
                   </div>
+              <div class="row">
+                    <div class="input-field col s12">
+                      
+                      <textarea id="textarea2" placeholder= "Edit Card Description" class="materialize-textarea new-card line white-text"></textarea>
+                      
+                    </div>
+                  </div>
+                  
 
-              
               
               <button type="submit" class="btn center-align grey darken-3 thin">Submit</button>
               <a href="/profile" class="btn center-align grey darken-3 thin"><span class="fa fa-user"></span> Return to Profile</a>
@@ -58,6 +66,7 @@
       var $newItemInput = $("input.new-item");
       var $newJobInput = $("input.new-job");
       var $newAboutInput = $("textarea.new-about");
+      var $newCardInput = $("textarea.new-card");
       // Adding event listeners 
       $(document).on("submit", "#user-form", insertUser);
       // This function inserts a new user into our database and then updates the view
@@ -67,12 +76,17 @@
           Username: $newItemInput.val().trim(),
           Jobs: $newJobInput.val().trim(),
           Aboutme: $newAboutInput.val().trim(),
+          Card: $newCardInput.val().trim()
         };
     
         $.post("/accountEdit", user);
         $newItemInput.val("");
         $newJobInput.val("");
         $newAboutInput.val("");
+
+        $.post("/search", user);
+        $newCardInput.val("");
+
       }
     });
     

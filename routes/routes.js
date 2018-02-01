@@ -23,6 +23,8 @@ module.exports = function(app, passport) {
          // load the index.ejs file
     });
 
+    
+
     // =====================================
     // SEARCH ==============================
     // =====================================
@@ -39,10 +41,25 @@ module.exports = function(app, passport) {
             results = dbUser;
             });
 
+            db.User.update({
+                Card: req.body.Card
+             },
+             {
+                 where: {
+                 Email: req.user.local.email
+             }
+             }) .then(function(dbUser){
+                 res.json(dbUser);
+             });
+
         
     });
+// this route will prob break the entire shits, so it might need to be moved into the route above, or make a get route and name it differently than the search route//
+  
+   
     
-
+    
+    
     // =====================================
     // account ==============================
     // =====================================
@@ -72,7 +89,7 @@ module.exports = function(app, passport) {
             Email: req.user.local.email,
             User: req.body.Username,
             Job: req.body.Jobs,
-            About: req.body.Aboutme},
+            About: req.body.Aboutme },
             {where: {
                 Email: req.user.local.email
             }

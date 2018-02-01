@@ -13,33 +13,11 @@
 
 
 <body>
-  <html>
-      <div class="container">
-          <div class="results">
-              <% for(var i=0; i < stuff.length; i++) { %>
-                <tr>
-                  <td><%= stuff[i].User %></td>
-                  <td><%= stuff[i].Job %></td>
-                </tr>
-             <% } %>
-
-          </div>
-          
-        </div>
- 
-
-
-    <form id="user-form">
-        <input class="new-job" placeholder="add a job" type="text" />
-        <button type="submit" class="btn btn-default">Submit</button>
-        <a href="/profile" class="btn btn-default"><span class="fa fa-user"></span> Return to Profile</a>
-        </form>
-  </html>
-
-
-
-  </body>
-      <script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  
+   
+ <script>
            $(document).ready(function() {
       
       
@@ -63,3 +41,82 @@
 
         
       </script>
+
+
+  <container id="search-box">
+    <nav class="white">
+      <div class="nav-wrapper">
+        <a href="/profile" class="brand-logo red-text">RTU</a>
+        <ul class="hide-on-med-and-down right">
+          <li>
+            <div class="center row">
+              <div class="col s12 ">
+                <div class="row" id="topbarsearch">
+                  <div class="input-field col s6 s12 red-text">
+                    <i class="red-text material-icons prefix">search</i>
+                    <input type="text" placeholder="Search" class="autocomplete red-text">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="/account" class="red-text">Account </a>
+          </li>
+          <li>
+            <img src="https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295430_960_720.png" alt="" class="circle responsive-img header-avatar">
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </container>
+
+   <form id="user-form">
+        <input class="new-job" placeholder="add a job" type="text" />
+        <button type="submit" class="btn btn-default">Submit</button>
+        <a href="/profile" class="btn btn-default"><span class="fa fa-user"></span> Return to Profile</a>
+        </form>
+  
+
+
+<div class="row">
+    <% for(var i=0; i < stuff.length; i++) { %>
+ <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="https://img00.deviantart.net/0dd8/i/2016/186/a/9/headshots__12_the_wut_scout_by_thetf2player1987-da8tygp.jpg">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><%= stuff[i].User %><i class="material-icons right"></i></span>
+      <p><a href="#">123-456-7899</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><%= stuff[i].Job %><i class="material-icons right">close</i></span>
+      <p><%= stuff[i].Card %></p>
+    </div>
+  </div>
+          
+             <% } %>
+     
+    </div>
+
+<footer class="page-footer">
+        <div class="center-align">
+            ©2018 RTU-31
+        </div>
+    </footer>
+     
+         
+<style>
+.card{
+  float: left;
+  margin: 30px;
+  margin-left: 40px;
+}
+</style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+  </body>
+  </html>
