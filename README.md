@@ -2,7 +2,7 @@
 
 
 ## GENERAL USEAGE
-==============
+
 - Right to You is the flagship application from RTU-31 that puts the customer/client first,
 	bringing every day services such as barbers, mechanics, tutors, instructors 
 	and more to your doorstep
@@ -16,7 +16,7 @@
 ### See it Live!
 https://radiant-river-47116.herokuapp.com/
 
--------------------------------------------------------------------------------------------
+
 
 ### Technologies Used:
 
@@ -29,16 +29,16 @@ https://radiant-river-47116.herokuapp.com/
 
 
 ### {coming soon in version 1.1.2}
-=============================
+
 - easy to use quick calendar, see contractor appointment availability, leave 
 	contact info and reserve your spot.
 
 - contractor and consumer reviews page
 	
 
--------------------------------------------------------------------------------------------
+
 ### {risk and liability}
-====================
+
 - Right to You is a product of the RTU-31 company, as such any claims of damage, uncompleted 
 	or not-as-advertised services are not a direct liability of the RTU-31 Corporation
 	though should such events occur please direct complaints to our support email.
