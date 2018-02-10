@@ -16,7 +16,7 @@
 ### See it Live!
 https://radiant-river-47116.herokuapp.com/
 
-![](images/righttoU.png)
+![](images/rightToU.png)
 
 
 
