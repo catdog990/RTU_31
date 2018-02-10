@@ -1,10 +1,10 @@
-Right to You by RTU-31(TM) version 1.1 1/25/18
+# Right to You 
 
 
 GENERAL USEAGE
 ==============
 - Right to You is the flagship application from RTU-31 that puts the customer/client first,
-	bringing every day services such as barbors, mechanics, tutors, instructers 
+	bringing every day services such as barbers, mechanics, tutors, instructors 
 	and more to your doorstep
 
 - Use the account page to post your listing or search for listings at any time using the 
