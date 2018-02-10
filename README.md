@@ -17,6 +17,17 @@
 https://radiant-river-47116.herokuapp.com/
 
 -------------------------------------------------------------------------------------------
+
+### Technologies Used:
+
+* [Node](https://nodejs.org/en/)
+* [MongoDB](https://www.mongodb.com/)
+* [Mongoose](http://mongoosejs.com/)
+* [EJS](http://ejs.co/)
+* [Express](https://expressjs.com)
+* [Passport](http://www.passportjs.org/)
+
+
 ### {coming soon in version 1.1.2}
 =============================
 - easy to use quick calendar, see contractor appointment availability, leave 
